@@ -1,13 +1,20 @@
 package server.models;
 
+import com.google.gson.annotations.Expose;
 import org.jetbrains.annotations.NotNull;
+import server.db.IDAOObject;
 
 import java.util.Objects;
 
-public class User {
+public class User implements IDAOObject {
 
+    @Expose
     private int id;
+
+    @Expose
     private String username;
+
+    @Expose
     private String password;
 
     public User() {
